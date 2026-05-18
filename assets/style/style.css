@@ -31,6 +31,7 @@ body {
     scroll-behavior: smooth;
     line-height: 1.6;
     padding-top: 80px;
+    overflow-x: hidden;
 }
 
 .main-data{
@@ -437,6 +438,13 @@ section {
 .page-card p,
 .page-card li {
     line-height: 1.9;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.page-card a {
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .page-card h2 { margin-top: 1.4em; }
@@ -691,7 +699,20 @@ nav ul a:hover {
     }
 
     .data{
-        padding: 100px 5%;
+        padding: 60px 5%;
+    }
+
+    .page-card {
+        padding: 28px 24px;
+    }
+
+    .room > div {
+        padding: 28px 24px;
+    }
+
+    .room {
+        padding: 50px 5% !important;
+        gap: 20px;
     }
 
     #menuButton {
@@ -734,6 +755,19 @@ nav ul a:hover {
     /* .about {
         text-align: center;
     } */
+
+    .page-card {
+        padding: 20px 16px;
+    }
+
+    .room > div {
+        padding: 20px 16px;
+    }
+
+    .room {
+        padding: 36px 4% !important;
+        gap: 16px;
+    }
 
     footer {
         text-align: center;
