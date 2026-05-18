@@ -82,6 +82,35 @@ nav a:hover {
     color: var(--clr-primary);
 }
 
+@media (min-width: 992px) {
+    nav ul li a {
+        position: relative;
+        padding-bottom: 3px;
+        padding-top: 2px;
+        color: var(--clr-text);
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 100px;
+        background-color: var(--clr-secondary);
+        transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--clr-text);
+    }
+
+    nav ul li a:hover::after {
+        width: 80%;
+    }
+}
+
 .top-logo{
     font-family: "Marcellus", serif;
     font-size: 1.5rem;
@@ -396,6 +425,40 @@ section {
   display: none;
 }
 
+/* ---------- PAGE CARDS (Impressum / Datenschutz) ---------- */
+.page-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.page-card p,
+.page-card li {
+    line-height: 1.9;
+}
+
+.page-card h2 { margin-top: 1.4em; }
+.page-card h3 { margin-top: 1.1em; }
+.page-card h4 { margin-top: 0.8em; }
+
+/* ---------- ROOM + CONTACT SECTION ---------- */
+.room {
+    background-color: #fffaf0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 80px 5% !important;
+    align-items: stretch;
+}
+
+.room > div {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    box-shadow: var(--shadow);
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     background: #fff;
@@ -438,6 +501,47 @@ footer .links-a-r{
 
 footer a:hover {
     color: var(--clr-primary);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-text);
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--clr-primary);
+}
+
+.social-links-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    border-radius: 14px;
+    width: auto;
+    height: auto;
+}
+
+.social-links-button:hover {
+    background-color: #c45e00 !important;
+}
+
+.social-links-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    line-height: 1;
 }
 
 
